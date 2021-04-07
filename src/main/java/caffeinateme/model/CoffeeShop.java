@@ -2,11 +2,16 @@ package caffeinateme.model;
 
 import java.util.*;
 
+import static caffeinateme.model.OrderStatus.Urgent;
+
 public class CoffeeShop {
 
     private Queue<Order> orders = new LinkedList<>();
 
     public void placeOrder(Order order, int distanceInMetres) {
+        if ( distanceInMetres <= 200 ){
+            order = order.withStatus(Urgent);
+        }
         orders.add(order);
 
     }

@@ -2,6 +2,8 @@ package caffeinateme.model;
 
 import java.util.Objects;
 
+import static caffeinateme.model.OrderStatus.*;
+
 public class Order {
     private final int quantity;
     private final String product;
@@ -9,7 +11,7 @@ public class Order {
     private final OrderStatus status;
 
     public Order(int quantity, String product, Customer customer) {
-        this(quantity,product, customer, OrderStatus.Normal);
+        this(quantity,product, customer, Normal);
     }
 
     public Order(int quantity, String product, Customer customer, OrderStatus status) {

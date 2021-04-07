@@ -22,6 +22,10 @@ public class Customer {
         this.distanceInMetres = distanceInMetres;
     }
 
+    public Integer getDistanceFromShop() {
+        return distanceInMetres;
+    }
+
     public CustomerOrderBuilder placesAnOrderFor(Order order) {
         return new CustomerOrderBuilder(order, distanceInMetres);
     }
